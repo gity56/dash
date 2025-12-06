@@ -78,23 +78,30 @@ const SpinWheel = () => {
   };
 
   return (
-    <div className="fixed inset-0 w-screen h-screen overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 flex items-center justify-center">
+    <div className="fixed inset-0 w-screen h-screen overflow-hidden bg-gradient-to-br from-red-600 via-red-700 to-red-900 flex items-center justify-center">
       <div className="w-full h-full flex flex-col items-center justify-center py-4 px-2 sm:px-4">
         
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute w-96 h-96 bg-purple-500/20 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
-          <div className="absolute w-96 h-96 bg-blue-500/20 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute w-96 h-96 bg-red-500/20 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
+          <div className="absolute w-96 h-96 bg-orange-500/20 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse" style={{ animationDelay: '1s' }}></div>
+        </div>
+
+        {/* Restaurant Logo */}
+        <div className="absolute top-4 left-4 sm:top-8 sm:left-8 z-30">
+          <div className=" rounded-xl  p-3 sm:p-4">
+            <img src="./market.png" className='w-24 -mt-4 -ml-4' alt="logo" />
+          </div>
         </div>
 
         <div className="relative z-10 flex flex-col items-center justify-center">
           
           <motion.h1 
-            className="text-3xl sm:text-8xl hh md:text-7xl font-bold text-white mb-6 sm:mb-12 text-center drop-shadow-lg px-4"
+            className="text-2xl hh  sm:text-4xl md:text-5xl sm:font-bold text-white mb-6 sm:mb-8 text-center drop-shadow-lg px-4"
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            Roue de la Fortune
+            Tournez et Gagnez !
           </motion.h1>
 
           <div className="relative mb-6 sm:mb-12">
@@ -104,7 +111,8 @@ const SpinWheel = () => {
 
             <div 
               ref={wheelRef}
-              className="relative w-[450px] h-[450px] sm:w-[650px] sm:h-[650px] md:w-[800px] md:h-[800px] lg:w-[900px] lg:h-[900px] rounded-full shadow-2xl"
+              onClick={spinWheel}
+              className="relative w-[280px] h-[280px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[550px] lg:h-[550px] rounded-full shadow-2xl cursor-pointer hover:scale-105 transition-transform duration-200"
               style={{
                 transform: `rotate(${rotation}deg)`,
                 transition: isSpinning ? 'transform 5s cubic-bezier(0.25, 0.1, 0.25, 1)' : 'none'
@@ -219,7 +227,7 @@ const SpinWheel = () => {
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.2, duration: 0.5 }}
                 >
-                  <h2 className="text-3xl hh sm:text-5xl md:text-6xl font-black text-white mb-4 sm:mb-6 drop-shadow-lg">
+                  <h2 className="text-3xl sm:text-5xl md:text-6xl font-black text-white mb-4 sm:mb-6 drop-shadow-lg">
                     🎉 FÉLICITATIONS ! 🎉
                   </h2>
                   <div className="bg-white/30 backdrop-blur-md rounded-3xl p-6 sm:p-8 mb-6 sm:mb-8 shadow-inner">
