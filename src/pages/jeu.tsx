@@ -82,12 +82,12 @@ const SpinWheel = () => {
     <>
       <Pattern />
       
-      <div className="fixed inset-0 -mt-8 w-screen h-screen overflow-hidden flex items-center justify-center">
+      <div className="fixed inset-0 -mt-4 w-screen h-screen overflow-hidden flex items-center justify-center">
         <div className="w-full h-full flex flex-col items-center justify-center py-4 px-2 sm:px-4 relative">
           
           {/* Restaurant Logo */}
           <div className="absolute top-4 left-1/2 -translate-x-1/2 sm:top-8 z-30">
-            <div className="rounded-xl p-3 sm:p-4">
+            <div className="rounded-xl p-3 ">
               <img src="./market.png" className='w-24' alt="logo" />
             </div>
           </div>
@@ -95,7 +95,7 @@ const SpinWheel = () => {
           <div className="relative z-10 flex flex-col items-center justify-center">
             
             <motion.h1 
-              className="text-2xl sm:text-4xl md:text-5xl sm:font-bold text-white mb-6 sm:mb-8 text-center drop-shadow-lg px-4"
+              className="text-2xl sm:text-4xl md:text-5xl sm:font-bold text-white -mt-4 mb-6 sm:mb-8 text-center drop-shadow-lg px-4"
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
