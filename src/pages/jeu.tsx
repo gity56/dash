@@ -82,7 +82,7 @@ const SpinWheel = () => {
     <>
       <Pattern />
       
-      <div className="fixed inset-0 w-screen h-screen overflow-hidden flex items-center justify-center">
+      <div className="fixed inset-0 -mt-8 w-screen h-screen overflow-hidden flex items-center justify-center">
         <div className="w-full h-full flex flex-col items-center justify-center py-4 px-2 sm:px-4 relative">
           
           {/* Restaurant Logo */}
